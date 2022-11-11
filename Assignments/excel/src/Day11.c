@@ -20,7 +20,7 @@
  * *
  * **********************************************************************************************************/
 
-void countstring(char *str)
+void countstring(char *str) /*function declaration*/
 {
 	int count = 0;
 	char* token = strtok(str, " ");
@@ -55,7 +55,7 @@ void free_all(char* ptr)
 {
 	free(ptr); 
 }
-int main()
+int main() /*function declaration*/
 {
 	char text[80];
 	char **words;
