@@ -5,7 +5,7 @@ INC = inc
 OBJ = obj
 BIN = bin
 
-all: $(BIN)/app09 $(BIN)/app10 $(BIN)/app10d $(BIN)/app11 $(BIN)/app12 $(BIN)/app13
+all: $(BIN)/app09 $(BIN)/app10 $(BIN)/app10d $(BIN)/app11 $(BIN)/app12 $(BIN)/app13 $(BIN)/app14-15
 
 $(BIN)/app09: $(OBJ)/Day9_3b.o
 	$(CC) -o $(BIN)/app09 $(OBJ)/Day9_3b.o
@@ -48,6 +48,13 @@ $(BIN)/app13: $(OBJ)/Day13.o
 $(OBJ)/Day13.o: $(SRC)/Day13.c
 	$(CC) -c $(SRC)/Day13.c -I $(INC)/
 	mv Day13.o $(OBJ)/
+
+$(BIN)/app14-15: $(OBJ)/Day14-15.o
+	$(CC) -o $(BIN)/app14-15 $(OBJ)/Day14-15.o
+
+$(OBJ)/Day14-15.o: $(SRC)/Day14-15.c
+	$(CC) -c $(SRC)/Day14-15.c -I $(INC)/
+	mv Day14-15.o $(OBJ)/
 
 clean: 
 	rm -f a.out *.o
